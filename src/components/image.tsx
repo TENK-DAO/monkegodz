@@ -25,6 +25,19 @@ export default function ({ src, ...props }: ImageProps) {
     return <img src={svg.svg?.dataURI ?? undefined} alt={props.alt} />
   }
 
+  const imageData = image.childImageSharp?.gatsbyImageData
+
+  if (imageData) {
+    return (
+      <GatsbyImage image={imageData} objectFit="contain" {...props} />
+    )
+  }
+
+  return <img src={image.publicURL ?? undefined} {...props} />
+
+  
+
+/*
   return (
     <GatsbyImage
       image={image.childImageSharp?.gatsbyImageData}
@@ -32,4 +45,5 @@ export default function ({ src, ...props }: ImageProps) {
       {...props}
     />
   )
+  */
 }
