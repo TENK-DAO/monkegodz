@@ -16,13 +16,13 @@ type PageContext = {
 const Landing: React.FC<PageProps<{}, PageContext>> = ({ pageContext: { locale } }) => (
   <Layout title={locale.title}>
     <Seo lang={locale.id} title={locale.title} description={locale.description} />
-    <MyNFTs />
-    <Hero heroTree={locale.hero} />
     {locale.extraSections?.map((section, i) => (
       <Section key={i} {...section}>
         <Markdown children={section.text} />
       </Section>
     ))}
+    <MyNFTs />
+    <Hero heroTree={locale.hero} />
   </Layout>
 )
 

@@ -1,4 +1,10 @@
-{
+{  
+  "extraSections": [
+  { 
+    "text": "# Monke Godz.",
+    "image": "doors.gif"
+  }
+],
   "viewIn": "View in English",
   "langPicker": "English",
   "title": "Misfits",
@@ -53,11 +59,5 @@
       "cta": "Buy Pre-Owned",
       "action": "GO_TO_PARAS"
     }
-  },
-  "extraSections": [
-    {
-      "text": "# Introducing\n# NEAR Misfits (Gen 0)\n\n10,000 brave souls set out into the vast unknown to explore the Metaverse... Only 1,923 survived.\n\nThese Misfits are part of a Decentralised Special Operations crew from all over the world and all walks of life. A group of humans rising to the challenge of their times, coming together to build the Metaverse: challenge the status quo, push the boundaries of what is possible, build and contribute to enabling technology.",
-      "image": "learn.webp"
-    }
-  ]
+  }
 }
