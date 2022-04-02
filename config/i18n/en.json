@@ -1,15 +1,9 @@
 {  
-  "extraSections": [
-  { 
-    "text": "# Monke Godz.",
-    "image": "doors.gif"
-  }
-],
   "viewIn": "View in English",
   "langPicker": "English",
-  "title": "Misfits",
-  "description": "NEAR's first PFP-style NFTs",
-  "calendarEvent": "Go Mint a Misfit!",
+  "title": "MonkeGodz",
+  "description": "NEAR's MonkeGodz PFP-style NFTs",
+  "calendarEvent": "Go Mint a MonkeGodz!",
   "connectWallet": "Connect Wallet",
   "signOut": "Sign Out",
   "myNFTs": "My NFTs",
@@ -20,15 +14,15 @@
   "zoomOut": "Zoom Out",
   "hero": {
     "backgroundImage": "hero-bg.svg",
-    "image": "doors.gif",
-    "title": "The first fleet of the  \n*Metaverse*",
-    "body": "Join an Exclusive Community of NEAR early adopters and BUIDLers.",
-    "ps": "Misfits drop at SALE_START!",
+    "image": "MonkeGodz_Logo.png",
+    "title": "333 programmatically generative NFT collection  launching on the @NEARProtocol Ecosystem.",
+    "body": "Join an Exclusive Community of NEAR",
+    "ps": "MonkeGodz drop at SALE_START!",
     "cta": "Add to Calendar",
     "action": "ADD_TO_CALENDAR(SALE_START)",
     "saleClosed": {
       "signedIn": {
-        "ps": "* Minting starts at: SALE_START\n\n* Pre-mint starts at: PRESALE_START\n\nGet in on the pre-mint! [Join our Discord](https://discord.com/invite/UY9Xf2k) and request an invite."
+        "ps": "* Minting starts at: SALE_START\n\n* Pre-mint starts at: PRESALE_START\n\nGet in on the pre-mint! [Join our Discord](https://discord.gg/qS9CDRWYSa) and request an invite."
       },
       "vip": {
         "ps": "Welcome, CURRENT_USER! Pre-mint starts at PRESALE_START",
@@ -44,7 +38,7 @@
       }
     },
     "saleOpen": {
-      "ps": "Misfit Minting Has Begun! Misfits remaining: REMAINING_COUNT",
+      "ps": "MonkeGodz Minting Has Begun! Misfits remaining: REMAINING_COUNT",
       "setNumber": "Number to mint",
       "cta": "Mint for MINT_PRICE",
       "action": "MINT",
@@ -54,10 +48,16 @@
     },
     "allSold": {
       "title": "All INITIAL_COUNT minted!",
-      "body": "The Misfits have all been created",
+      "body": "The MonkeGodz have all been created",
       "ps": "",
       "cta": "Buy Pre-Owned",
       "action": "GO_TO_PARAS"
     }
-  }
+  },
+  "extraSections": [
+    { 
+      "text": "# MonkeGodz.",
+      "image": "doors.gif"
+    }
+  ]
 }

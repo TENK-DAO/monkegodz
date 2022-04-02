@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Lightbox from 'react-image-lightbox';
+import Modal from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import { wallet } from "../../near"
 import Section from '../section'
@@ -13,13 +14,25 @@ const MyNFTs: React.FC<{}> = () => {
   const { contractMetadata, nfts } = useTenk()
   const [photoIndex, setPhotoIndex] = useState(0)
   const [lightboxOpen, setLightboxOpen] = useState(false)
-
+  const [modalboxOpen, setModalClose] = useState(true)
+  
   if (!locale || !currentUser || !contractMetadata || nfts.length === 0) return null
 
   return (
     <>
       <Section>
         <h1>{locale.myNFTs}</h1>
+        {modalboxOpen && (
+        <Modal
+          mainSrc={nfts[nfts.length -1].media}
+          imageTitle={nfts[photoIndex].metadata?.title}
+          imageCaption={nfts[photoIndex].metadata?.description}
+          zoomInLabel={locale.zoomIn}
+          zoomOutLabel={locale.zoomOut}
+          closeLabel={locale.close}
+          onCloseRequest={() => setModalClose(false)}
+        />
+      )}
         <div className={css.grid}>
           {nfts.map((nft, index) => (
             <button
