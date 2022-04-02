@@ -25,7 +25,7 @@ const MyNFTs: React.FC<{}> = () => {
         <h1>{locale.myNFTs}</h1>
         <div>
 
-        {modalboxOpen && (
+        {sequenceboxOpen && (
         <Modal
           mainSrc={nfts[nfts.length -1].media}
           imageTitle={nfts[nfts.length -1].metadata?.title}
