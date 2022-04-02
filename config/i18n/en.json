@@ -38,7 +38,7 @@
       }
     },
     "saleOpen": {
-      "ps": "MonkeGodz Minting Has Begun! Misfits remaining: REMAINING_COUNT",
+      "ps": "MonkeGodz Minting Has Begun! MonkeGodz remaining: REMAINING_COUNT",
       "setNumber": "Number to mint",
       "cta": "Mint for MINT_PRICE",
       "action": "MINT",

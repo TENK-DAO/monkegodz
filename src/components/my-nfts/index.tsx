@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Lightbox from 'react-image-lightbox';
+import Sequence from 'react-image-lightbox';
 import Modal from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import { wallet } from "../../near"
@@ -15,24 +16,33 @@ const MyNFTs: React.FC<{}> = () => {
   const [photoIndex, setPhotoIndex] = useState(0)
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [modalboxOpen, setModalClose] = useState(true)
-  
+  const [sequenceboxOpen, setSequenceClose] = useState(true)
   if (!locale || !currentUser || !contractMetadata || nfts.length === 0) return null
 
   return (
     <>
       <Section>
         <h1>{locale.myNFTs}</h1>
+        <div>
+
         {modalboxOpen && (
         <Modal
           mainSrc={nfts[nfts.length -1].media}
-          imageTitle={nfts[photoIndex].metadata?.title}
-          imageCaption={nfts[photoIndex].metadata?.description}
+          imageTitle={nfts[nfts.length -1].metadata?.title}
+          imageCaption={nfts[nfts.length -1].metadata?.description}
           zoomInLabel={locale.zoomIn}
           zoomOutLabel={locale.zoomOut}
           closeLabel={locale.close}
+          onCloseRequest={() => setSequenceClose(false)}
+        />
+        )}
+        {modalboxOpen && (
+        <Sequence
+          mainSrc={`/static/5310715c048fb24c7f1048e24a46c7c3/doors.gif`}
           onCloseRequest={() => setModalClose(false)}
         />
-      )}
+        )}
+        </div>
         <div className={css.grid}>
           {nfts.map((nft, index) => (
             <button
