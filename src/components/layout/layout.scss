@@ -1,8 +1,5 @@
 @import "./a11y.css";
 @import "./atcb.css";
-@import "@fontsource/montserrat/400.css"; /* Weight 400 */
-@import "@fontsource/montserrat/600.css";
-@import "@fontsource/montserrat/700.css";
 @import "../../../config/colors.scss";
 
 $white: white !default;
@@ -11,6 +8,13 @@ $primary: #e73b93 !default;
 $secondary: #aad055 !default;
 $tertiary: #a463b0 !default;
 
+@font-face {
+  font-family: 'PixelAzureBonds';
+  src: url('pixel_azure_bonds-webfont.woff2') format('woff2'),
+    url('pixel_azure_bonds-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   /* Typographic Scale */
   --base-font-size: 14px;
@@ -22,7 +26,16 @@ $tertiary: #a463b0 !default;
   }
 
   /* Font Family */
-  --sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --sans: system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  Segoe UI,
+  Roboto,
+  Helvetica,
+  Arial,
+  sans-serif;
+  --heading: PixelAzureBonds,
+  var(--sans);
   --monospace: "Source Code Pro", monospace;
 
   /* Font Weights */
@@ -114,6 +127,7 @@ html {
   font-family: var(--sans);
   font-size: var(--base-font-size);
   font-weight: var(--fw-regular);
+  text-align: center;
 }
 
 body {
@@ -126,6 +140,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: var(--heading);
   font-weight: var(--fw-black);
   margin: 0;
   line-height: var(--lh-headings);
@@ -204,10 +219,10 @@ button,
 
 input,
 select {
-  background-color: var(--bg);
+  background-color: transparent;
   border: 1px solid var(--gray-3);
   border-radius: var(--br-small);
-  color: inherit;
+  color: var(--fg);
 }
 
 input,
@@ -231,7 +246,18 @@ button:active,
 button.secondary,
 .button.secondary {
   --color: #{$secondary};
-  --color-shadow: #{soft(light($secondary))};
+  border: none;
+  font-family: var(--heading);
+  font-size: 1.5em;
+  padding: 0;
+  }
+  
+  button.secondary:hover,
+  .button.secondary:hover,
+  button.secondary:focus,
+  .button.secondary:focus {
+    box-shadow: none;
+    text-shadow: 0px 3px var(--primary);
 }
 button.link,
 .button.link {
@@ -256,6 +282,7 @@ select:hover,
 select:focus,
 select:active {
   border-color: var(--gray-5);
+  background-color: var(--bg);
 }
 
 select {
@@ -285,6 +312,7 @@ input::selection {
 .container {
   margin-left: auto;
   margin-right: auto;
+  max-width: calc(80 * var(--base-spacing));
   padding-left: var(--spacing-l);
   padding-right: var(--spacing-l);
 }

@@ -1,5 +1,7 @@
 /* This is a CSS Module; see https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/ */
 .nav {
+  --bg: var(--white);
+  --fg: var(--black);
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -8,13 +10,9 @@
   padding: var(--spacing-l);
 }
 
-.social,
-.title {
-  display: flex;
-  align-items: center;
-}
-
 .social {
+  align-items: center;
+  display: flex;
   gap: var(--spacing-s);
 }
 

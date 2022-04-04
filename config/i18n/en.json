@@ -1,4 +1,4 @@
-{  
+{
   "viewIn": "View in English",
   "langPicker": "English",
   "title": "MonkeGodz",
@@ -13,8 +13,6 @@
   "zoomIn": "Zoom In",
   "zoomOut": "Zoom Out",
   "hero": {
-    "backgroundImage": "hero-bg.svg",
-    "image": "MonkeGodz_Logo.png",
     "title": "333 programmatically generative NFT collection  launching on the @NEARProtocol Ecosystem.",
     "body": "Join an Exclusive Community of NEAR",
     "ps": "MonkeGodz drop at SALE_START!",
@@ -55,9 +53,5 @@
     }
   },
   "extraSections": [
-    { 
-      "text": "# MonkeGodz.",
-      "image": "doors.gif"
-    }
   ]
 }

@@ -6,7 +6,7 @@
   align-items: center;
   display: grid;
   grid-template-columns: auto 5em;
-  justify-content: flex-start;
+  justify-content: center;
   gap: var(--spacing-s);
 }
 

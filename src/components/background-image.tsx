@@ -3,12 +3,21 @@ import { convertToBgImage } from "gbimage-bridge"
 import GatsbyBackgroundImage, { IBackgroundImageProps } from 'gatsby-background-image'
 import useImageData from "../hooks/useImageData"
 
+function backgroundStyles(bgURL?: string) {
+  return {
+    backgroundImage: `url("${bgURL}")`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  }
+}
+
 type Props = IBackgroundImageProps & JSX.IntrinsicElements['div'] & {
   src?: string
   /**
    * Could add more; gatsby-background-image allows any of JSX.IntrinsicElements, but that doesn't type-check well
    */
-  Tag: 'section' | 'div' | 'header' | 'footer' | 'aside'
+  Tag: 'section' | 'div' | 'header' | 'footer' | 'aside' | 'nav'
 }
 
 /**
@@ -19,7 +28,7 @@ type StrictProps = Omit<Props, 'src'> & {
 }
 
 /**
- * Simple background images for Gatsby! Pass in the name of a file in
+ * Simple ackground images for Gatsby! Pass in the name of a file in
  * `config/images`, and this will render it correctly.
  *
  * Uses gatsby-transformer-inline-svg plugin to render SVG backgrounds.
@@ -44,22 +53,31 @@ const StrictBackgroundImage: React.FC<StrictProps> = ({ src, Tag, style, ...prop
       <Tag
         {...props}
         style={{
-          backgroundImage: `url("${svg.svg?.dataURI ?? undefined}")`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'contain',
-          backgroundPosition: 'center',
+          ...backgroundStyles(svg.svg?.dataURI ?? undefined),
           ...style,
         }}
       />
     )
   }
 
-  const bgImage = convertToBgImage(image.childImageSharp?.gatsbyImageData)
+  const imgData = image.childImageSharp?.gatsbyImageData
+
+  if (!imgData) {
+    return (
+      <Tag
+        {...props}
+        style={{
+          ...backgroundStyles(image.publicURL ?? undefined),
+          ...style,
+        }}
+      />
+    )
+  }
 
   return (
     // @ts-expect-error type woes; gatsby-background-image does not make it easy to work with their types
     <GatsbyBackgroundImage
-      {...(bgImage ?? {})}
+      {...convertToBgImage(imgData)}
       Tag={Tag}
       {...props}
       preserveStackingContext
