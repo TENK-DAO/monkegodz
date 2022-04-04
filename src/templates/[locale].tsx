@@ -8,8 +8,6 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Markdown from "../components/markdown"
 import type { DecoratedLocale } from "../../lib/locales"
-import { StaticVideo } from "gatsby-plugin-video"
-import { Video } from 'gatsby-video'
 
 type PageContext = {
   locale: DecoratedLocale
@@ -19,18 +17,19 @@ const Landing: React.FC<PageProps<{}, PageContext>> = ({ data, location, pageCon
   const params = new URLSearchParams(location.search)
   const transactionHashes = params.get('transactionHashes')
 
-  const videos: any = data.file.childVideoFfmpeg
-
   if (transactionHashes) {
-    return (
-      <Video
-        poster={undefined}
-        autoPlay
-        muted
-        loop
-        sources={[videos.webm, videos.mp4]}
-      />
-    )
+    console.log(data)
+
+    return <>Do Video Stuff</>
+    // return (
+    //   <Video
+    //     poster={undefined}
+    //     autoPlay
+    //     muted
+    //     loop
+    //     sources={[videos.webm, videos.mp4]}
+    //   />
+    // )
   }
 
   return (
@@ -49,8 +48,9 @@ const Landing: React.FC<PageProps<{}, PageContext>> = ({ data, location, pageCon
 
 export default Landing
 
+/*
 export const pageQuery = graphql`
-  {
+  query OneVideo {
     file(relativePath: { eq: "RevealBackground.mp4" }) {
       childVideoFfmpeg {
         webm: transcode(
@@ -88,3 +88,4 @@ export const pageQuery = graphql`
     }
   }
 `
+*/

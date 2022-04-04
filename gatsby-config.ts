@@ -32,7 +32,7 @@ export const plugins = [
     },
   },
   {
-    resolve: `gatsby-transformer-ffmpeg`,
+    resolve: `gatsby-source-filesystem`,
     options: {
       name: `videos`,
       path: `${__dirname}/config/videos`,
