@@ -32,6 +32,13 @@ export const plugins = [
     },
   },
   {
+    resolve: `gatsby-transformer-ffmpeg`,
+    options: {
+      name: `videos`,
+      path: `${__dirname}/config/videos`,
+    },
+  },
+  {
     // See https://www.gatsbyjs.com/plugins/gatsby-plugin-image/
     resolve: `gatsby-plugin-sharp`,
     options: {
