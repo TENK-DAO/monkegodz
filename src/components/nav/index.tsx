@@ -4,8 +4,8 @@ import { signIn, wallet } from "../../near"
 import * as css from "./nav.module.css"
 import useLocales from "../../hooks/useLocales"
 import Dropdown from "../../components/dropdown"
-import BackgroundImage from "../../components/background-image"
 import Image from "../../components/image"
+import Video from "../../components/video"
 import { StaticImage } from "gatsby-plugin-image"
 import LangPicker from "../lang-picker"
 
@@ -19,15 +19,8 @@ export default function Nav() {
   const { locale } = useLocales()
   if (!locale) return null
   return (
-    <BackgroundImage
-      Tag="nav"
-      src="doors.gif"
-      className={css.nav}
-      style={{
-        backgroundPosition: 'top',
-        paddingBottom: 'calc(720 / 1920 * 100%)',
-      }}
-    >
+    <nav className={css.nav}>
+      <Video src="LandingPage.mp4" autoPlay loop />
       <h1 className={css.title}>
         <StaticImage
           src="../../../config/images/MonkeGodz_Logo.png"
@@ -60,6 +53,6 @@ export default function Nav() {
       ) : (
         <button className="secondary" onClick={signIn}>{locale.connectWallet}</button>
       )}
-    </BackgroundImage>
+    </nav>
   )
 }

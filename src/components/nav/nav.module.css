@@ -7,7 +7,18 @@
   flex-wrap: wrap;
   gap: var(--spacing-s) var(--spacing-m);
   justify-content: space-between;
-  padding: var(--spacing-l);
+  overflow: hidden;
+  padding: var(--spacing-l) var(--spacing-l) calc(720 / 1920 * 100%);
+  position: relative;
+}
+
+.nav video {
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%) scale(102%);
+  z-index: -1;
 }
 
 .social {
