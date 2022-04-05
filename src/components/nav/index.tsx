@@ -20,7 +20,7 @@ export default function Nav() {
   if (!locale) return null
   return (
     <nav className={css.nav}>
-      <Video src="LandingPage.mp4" autoPlay loop />
+      <Video src="Landingpage.mp4" autoPlay loop />
       <h1 className={css.title}>
         <StaticImage
           src="../../../config/images/MonkeGodz_Logo.png"
