@@ -17,10 +17,10 @@ const Landing: React.FC<PageProps<{}, PageContext>> = ({ data, location, pageCon
   const params = new URLSearchParams(location.search)
   const transactionHashes = params.get('transactionHashes')
 
-  if (transactionHashes) {
-    console.log(data)
+  // if (transactionHashes) {
+    // console.log(data)
 
-    return <>Do Video Stuff</>
+    // return <>Do Video Stuff</>
     // return (
     //   <Video
     //     poster={undefined}
@@ -30,7 +30,7 @@ const Landing: React.FC<PageProps<{}, PageContext>> = ({ data, location, pageCon
     //     sources={[videos.webm, videos.mp4]}
     //   />
     // )
-  }
+  // }
 
   return (
     <Layout title={locale.title}>
