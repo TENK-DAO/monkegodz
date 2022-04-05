@@ -7,29 +7,20 @@ import Section from "../components/section"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Markdown from "../components/markdown"
-import Video from "../components/video"
 import type { DecoratedLocale } from "../../lib/locales"
+import Reveal from "../components/reveal"
+import { navigate } from "gatsby"
 
 type PageContext = {
   locale: DecoratedLocale
 }
 
-const Landing: React.FC<PageProps<{}, PageContext>> = ({ data, location, pageContext: { locale } }) => {
+const Landing: React.FC<PageProps<{}, PageContext>> = ({ location, pageContext: { locale } }) => {
   const params = new URLSearchParams(location.search)
   const transactionHashes = params.get('transactionHashes')
 
   if (transactionHashes) {
-    return <Video
-      src="Minting_Animation.mp4"
-      autoPlay
-      loop
-      style={{
-        height: '100vh',
-        display: 'block',
-        width: '100%',
-        objectFit: 'cover',
-      }}
-    />
+    return <Reveal onClose={() => navigate(`/${locale.id}`)} />
   }
 
   return (
