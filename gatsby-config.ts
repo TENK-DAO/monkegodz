@@ -31,6 +31,7 @@ export const plugins = [
       path: `${__dirname}/config/images`,
     },
   },
+  `gatsby-transformer-video`,
   {
     resolve: `gatsby-source-filesystem`,
     options: {
