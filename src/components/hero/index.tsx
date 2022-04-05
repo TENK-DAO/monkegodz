@@ -46,18 +46,6 @@ const Hero: React.FC<{ heroTree: ExpandedHeroTree }> = ({ heroTree }) => {
           e.preventDefault()
           act(hero.action, { ...data, numberToMint })
         }}>
-          {hero.setNumber && (
-            <p className={css.setNumber}>
-              <label htmlFor="numberToMint">{hero.setNumber}</label>
-              <input
-                max={tenkData.mintRateLimit}
-                min={1}
-                onChange={e => setNumberToMint(parseInt(e.target.value))}
-                value={numberToMint}
-                type="number"
-              />
-            </p>
-          )}
           <button className={css.cta}>
             {fill(hero.cta, { ...data, numberToMint })}
           </button>

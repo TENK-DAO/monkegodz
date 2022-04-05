@@ -30,14 +30,12 @@
     "presale": {
       "vip": {
         "ps": "Welcome, CURRENT_USER! Pre-mint started. Public minting starts at SALE_START.\n\nYour remaining pre-mint allowance: MINT_LIMIT",
-        "setNumber": "Number to mint",
         "cta": "Mint for MINT_PRICE",
         "action": "MINT"
       }
     },
     "saleOpen": {
       "ps": "Blessed thou art you, young monke. Are you ready for divinity?",
-      "setNumber": "Number to mint",
       "cta": "Mint for MINT_PRICE",
       "action": "MINT",
       "signedOut": {

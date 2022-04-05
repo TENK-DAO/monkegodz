@@ -30,14 +30,12 @@
     "presale": {
       "vip": {
         "ps": "¡Bienvenid@, CURRENT_USER! Los VIPs puedes mint ahora. El mint publico empezar a las SALE_START.\n\nTu VIP asignación restante: MINT_LIMIT",
-        "setNumber": "Crear cantidad de",
         "cta": "Crear para MINT_PRICE",
         "action": "MINT"
       }
     },
     "saleOpen": {
       "ps": "Bendecido por el arte, joven monke, ¿estas listo para la divinidad?",
-      "setNumber": "Crear quantidad de",
       "cta": "Crear para MINT_PRICE",
       "action": "MINT",
       "signedOut": {
