@@ -32,6 +32,7 @@ export default function Nav() {
         <StaticImage
           src="../../../config/images/MonkeGodz_Logo.png"
           alt="MonkeGodz"
+          loading="eager"
           height={70}
         />
       </h1>
