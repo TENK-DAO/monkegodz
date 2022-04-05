@@ -7,6 +7,7 @@ import Section from "../components/section"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Markdown from "../components/markdown"
+import Video from "../components/video"
 import type { DecoratedLocale } from "../../lib/locales"
 
 type PageContext = {
@@ -17,20 +18,19 @@ const Landing: React.FC<PageProps<{}, PageContext>> = ({ data, location, pageCon
   const params = new URLSearchParams(location.search)
   const transactionHashes = params.get('transactionHashes')
 
-  // if (transactionHashes) {
-    // console.log(data)
-
-    // return <>Do Video Stuff</>
-    // return (
-    //   <Video
-    //     poster={undefined}
-    //     autoPlay
-    //     muted
-    //     loop
-    //     sources={[videos.webm, videos.mp4]}
-    //   />
-    // )
-  // }
+  if (transactionHashes) {
+    return <Video
+      src="Minting_Animation.mp4"
+      autoPlay
+      loop
+      style={{
+        height: '100vh',
+        display: 'block',
+        width: '100%',
+        objectFit: 'cover',
+      }}
+    />
+  }
 
   return (
     <Layout title={locale.title}>
