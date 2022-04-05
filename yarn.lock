@@ -2860,7 +2860,7 @@ add-filename-increment@^1.0.0:
 
 add-to-calendar-button@AhaLabs/add-to-calendar-button#develop:
   version "1.6.2"
-  resolved "git+ssh://git@github.com/AhaLabs/add-to-calendar-button.git#d795e7e71050007143d0fd238daf2f603786255c"
+  resolved "https://codeload.github.com/AhaLabs/add-to-calendar-button/tar.gz/d795e7e71050007143d0fd238daf2f603786255c"
 
 address@1.1.2, address@^1.0.1:
   version "1.1.2"

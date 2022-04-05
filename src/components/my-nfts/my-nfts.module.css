@@ -3,8 +3,7 @@
   gap: var(--spacing-m);
   grid-template-columns: repeat(auto-fill, minmax(7em, 1fr));
   margin: var(--spacing-m) 0;
-  background-image: url("/static/707da4119aa422d79cf3115340308807/reveal0001.jpg");
-  height: 1080px;
+  height: 200px;
   width: 1920px;
 }
 
