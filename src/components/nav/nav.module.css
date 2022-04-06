@@ -17,7 +17,7 @@
   left: 50%;
   position: absolute;
   top: 0;
-  transform: translateX(-50%) scale(102%);
+  transform: translateX(-50%) scale(1.02);
   z-index: -1;
 }
 
