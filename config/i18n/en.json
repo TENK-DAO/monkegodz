@@ -35,7 +35,7 @@
       }
     },
     "saleOpen": {
-      "ps": "Blessed thou art you, young monke. Are you ready for divinity?",
+      "ps": "Blessed thou art, young monke. Art thou ready for divinity?",
       "cta": "Mint for MINT_PRICE",
       "action": "MINT",
       "signedOut": {
