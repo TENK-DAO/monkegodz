@@ -8,6 +8,10 @@ const IndexPage = () => {
   const { locales } = useLocales()
 
   React.useEffect(() => {
+    if (locales.length === 1) {
+      navigate(`/${locales[0].id}/`)
+    }
+
     const preferredLocale = window.navigator.language
     let matchingLocale = locales.find(
       l => l.id.replace("_", "-") === preferredLocale
