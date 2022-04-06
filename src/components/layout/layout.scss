@@ -248,16 +248,17 @@ button.secondary,
   --color: #{$secondary};
   border: none;
   font-family: var(--heading);
-  font-size: 1.5em;
+  font-size: 1.25em;
   padding: 0;
-  }
-  
-  button.secondary:hover,
-  .button.secondary:hover,
-  button.secondary:focus,
-  .button.secondary:focus {
-    box-shadow: none;
-    text-shadow: 0px 3px var(--primary);
+  line-height: 1;
+}
+
+button.secondary:hover,
+.button.secondary:hover,
+button.secondary:focus,
+.button.secondary:focus {
+  box-shadow: none;
+  text-shadow: 0px 3px var(--primary);
 }
 button.link,
 .button.link {

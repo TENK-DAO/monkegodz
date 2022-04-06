@@ -9,7 +9,9 @@ const Dropdown: React.FC<{
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger className={css.trigger}>
-        {trigger}
+        <span title={typeof trigger === 'string' ? trigger : undefined}>
+          {trigger}
+        </span>
       </DropdownMenu.Trigger>
 
       <DropdownMenu.Content className={css.content}>

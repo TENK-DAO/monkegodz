@@ -25,12 +25,12 @@
 
 .social {
   align-items: center;
+  justify-content: flex-end;
   display: flex;
   gap: var(--spacing-s);
   position: relative;
   z-index: 1;
   top: -0.8em;
-  left: 0.8em;
 }
 
 .social svg {
