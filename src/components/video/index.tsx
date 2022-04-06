@@ -12,7 +12,7 @@ const Video: React.FC<Props> = ({ src, ...props }) => {
   const { videoH264 } = useVideoData(src)
   return (
     <video playsInline muted preload="auto" {...props}>
-      <source src={videoH264.path} type="video/mp4; codecs=avc1" />
+      <source src={videoH264.path} />
     </video>
   )
 }
