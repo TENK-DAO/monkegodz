@@ -30,7 +30,8 @@
   gap: var(--spacing-s);
   position: relative;
   z-index: 1;
-  top: -0.8em;
+  top: -1.0em;
+  right: 0.25em;
 }
 
 .social svg {

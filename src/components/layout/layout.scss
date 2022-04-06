@@ -247,6 +247,7 @@ button.secondary,
 .button.secondary {
   --color: #{$secondary};
   border: none;
+  border-radius: 0;
   font-family: var(--heading);
   font-size: 1.25em;
   padding: 0;
