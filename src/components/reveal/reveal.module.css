@@ -5,25 +5,6 @@
   background-color: white;
 }
 
-.reveal button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: none;
-  color: var(--gray-5);
-  font-weight: var(--fw-regular);
-  font-size: 2em;
-  padding: var(--spacing-m);
-  line-height: 0.4;
-  z-index: 1;
-}
-
-.reveal button:hover,
-.reveal button:focus {
-  box-shadow: none;
-  font-weight: var(--fw-black);
-}
-
 .reveal video {
   height: 100vh;
   display: block;
