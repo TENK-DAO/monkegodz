@@ -21,14 +21,34 @@ export default function Nav() {
   return (
     <nav className={css.nav}>
       <Video src="Landingpage.mp4" autoPlay loop />
-      <h1 className={css.title}>
-        <StaticImage
-          src="../../../config/images/MonkeGodz_Logo.png"
-          alt="MonkeGodz"
-          loading="eager"
-          height={70}
-        />
-      </h1>
+      <div className={css.main}>
+        <h1 className={css.title}>
+          <StaticImage
+            src="../../../config/images/MonkeGodz_Logo.png"
+            alt="MonkeGodz"
+            loading="eager"
+            height={70}
+            width={246}
+          />
+        </h1>
+        <LangPicker />
+        {currentUser ? (
+          <span>
+            {/* extra span so that Gatsby's hydration notices this is not the same as the signIn button */}
+            <Dropdown
+              trigger={currentUser}
+              items={[
+                {
+                  children: locale.signOut,
+                  onSelect: signOut,
+                },
+              ]}
+            />
+          </span>
+        ) : (
+          <button className="secondary" onClick={signIn}>{locale.connectWallet}</button>
+        )}
+      </div>
       <div className={css.social}>
         {settings.social.map(({ href, img, alt }) => (
           <a href={href} target="_blank" rel="noopener noreferrer" title={alt} key={alt}>
@@ -36,23 +56,6 @@ export default function Nav() {
           </a>
         ))}
       </div>
-      <LangPicker />
-      {currentUser ? (
-        <span>
-          {/* extra span so that Gatsby's hydration notices this is not the same as the signIn button */}
-          <Dropdown
-            trigger={currentUser}
-            items={[
-              {
-                children: locale.signOut,
-                onSelect: signOut,
-              },
-            ]}
-          />
-        </span>
-      ) : (
-        <button className="secondary" onClick={signIn}>{locale.connectWallet}</button>
-      )}
     </nav>
   )
 }
