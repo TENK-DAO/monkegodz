@@ -9,7 +9,7 @@ type Markdown = string
 
 // TODO: should be able to import Action from ./runtimeUtils, but currently breaks with typescript-json-validator
 // import type { Action } from './runtimeUtils'
-type Action = "ADD_TO_CALENDAR(SALE_START)" | "ADD_TO_CALENDAR(PRESALE_START)" | "SIGN_IN" | "MINT" | "GO_TO_PARAS"
+type Action = "ADD_TO_CALENDAR(SALE_START)" | "ADD_TO_CALENDAR(PRESALE_START)" | "SIGN_IN" | "MINT" | "GO_TO_PARAS" | "JOIN_DISCORD"
 
 export const requiredHeroFields = [
   'title',

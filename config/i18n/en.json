@@ -28,7 +28,9 @@
       }
     },
     "presale": {
-      "ps": "MonkeGodz minting now! VIP only. [Join our Discord](https://discord.gg/DrkatBA5ud) to request an invite.",
+      "ps": "MonkeGodz minting now! Get in on it:",
+      "cta": "Join our Discord",
+      "action": "JOIN_DISCORD",
       "vip": {
         "ps": "Art thou ready for divinity?",
         "cta": "Mint for MINT_PRICE",
