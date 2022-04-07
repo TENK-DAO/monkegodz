@@ -15,21 +15,22 @@
   "hero": {
     "title": "join the godz",
     "body": "333 programmatically-generated pixel god NFTs released on NEAR.\n\nEach MonkeGodz holder will gain voting rights in DeityDAO, paving the way for the project's future!",
-    "ps": "MonkeGodz drop at SALE_START!",
+    "ps": "MonkeGodz drop at PRESALE_START!",
     "cta": "Add to Calendar",
-    "action": "ADD_TO_CALENDAR(SALE_START)",
+    "action": "ADD_TO_CALENDAR(PRESALE_START)",
     "saleClosed": {
       "signedIn": {
-        "ps": "* Minting starts at: SALE_START\n\n* Pre-mint starts at: PRESALE_START\n\nGet in on the pre-mint! [Join our Discord](https://discord.gg/DrkatBA5ud) and request an invite."
+        "ps": "Minting starts at: PRESALE_START\n\nGet in on it! [Join our Discord](https://discord.gg/DrkatBA5ud) and request an invite."
       },
       "vip": {
-        "ps": "Welcome, CURRENT_USER! Pre-mint starts at PRESALE_START",
+        "ps": "Welcome, CURRENT_USER! Minting starts at PRESALE_START",
         "action": "ADD_TO_CALENDAR(PRESALE_START)"
       }
     },
     "presale": {
+      "ps": "MonkeGodz minting now! VIP only. [Join our Discord](https://discord.gg/DrkatBA5ud) to request an invite.",
       "vip": {
-        "ps": "Welcome, CURRENT_USER! Pre-mint started. Public minting starts at SALE_START.\n\nYour remaining pre-mint allowance: MINT_LIMIT",
+        "ps": "Art thou ready for divinity?",
         "cta": "Mint for MINT_PRICE",
         "action": "MINT"
       }
