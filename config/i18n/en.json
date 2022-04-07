@@ -20,7 +20,7 @@
     "action": "ADD_TO_CALENDAR(SALE_START)",
     "saleClosed": {
       "signedIn": {
-        "ps": "* Minting starts at: SALE_START\n\n* Pre-mint starts at: PRESALE_START\n\nGet in on the pre-mint! [Join our Discord](https://discord.gg/qS9CDRWYSa) and request an invite."
+        "ps": "* Minting starts at: SALE_START\n\n* Pre-mint starts at: PRESALE_START\n\nGet in on the pre-mint! [Join our Discord](https://discord.gg/DrkatBA5ud) and request an invite."
       },
       "vip": {
         "ps": "Welcome, CURRENT_USER! Pre-mint starts at PRESALE_START",
