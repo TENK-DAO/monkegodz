@@ -159,20 +159,20 @@ picture {
 
 a,
 .link {
-  color: var(--secondary);
+  color: var(--primary);
   padding: 0;
   text-decoration: none;
+  position: relative;
 }
 a:hover,
 a:focus,
 .link:hover,
 .link:focus {
-  color: var(--primary);
   text-decoration: underline;
 }
 a:active,
 .link:active {
-  color: var(--tertiary);
+  top: 1px;
 }
 
 strong {

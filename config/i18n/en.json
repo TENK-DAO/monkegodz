@@ -54,5 +54,9 @@
     }
   },
   "extraSections": [
+    {
+      "text": "Launching Partners: [Tenk DAO](https://tenk.dev/)",
+      "image": "tenk_logo_circle.png"
+    }
   ]
 }

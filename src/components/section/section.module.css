@@ -3,12 +3,3 @@
   padding-top: var(--spacing-xl);
   width: 100%;
 }
-
-.content {
-  place-items: center;
-  grid-gap: var(--spacing-l);
-}
-
-.content.hasImage {
-  display: grid;
-}
