@@ -28,11 +28,11 @@
       }
     },
     "presale": {
-      "ps": "MonkeGodz minting now! Get in on it:",
+      "ps": "Only REMAINING_COUNT left. Get in on it:",
       "cta": "Join our Discord",
       "action": "JOIN_DISCORD",
       "vip": {
-        "ps": "Art thou ready for divinity?",
+        "ps": "REMAINING_COUNT remain. Art thou ready for divinity?",
         "cta": "Mint for MINT_PRICE",
         "action": "MINT"
       }
