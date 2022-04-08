@@ -38,7 +38,7 @@
       }
     },
     "saleOpen": {
-      "ps": "Art thou ready for divinity?",
+      "ps": "REMAINING_COUNT remain. Art thou ready for divinity?",
       "cta": "Mint for MINT_PRICE",
       "action": "MINT",
       "signedOut": {
